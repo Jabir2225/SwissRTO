@@ -1,0 +1,18 @@
+{
+  "name": "swiss-institute-website",
+  "version": "1.0.0",
+  "description": "Swiss Institute Australia - RTO 41517 Website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": ["rto", "education", "vocational", "training", "melbourne"],
+  "author": "Swiss Institute Australia",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
+}

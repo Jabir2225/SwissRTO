@@ -1,0 +1,150 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/courses">Courses</a>
+            <span>/</span>
+            <span><%= course.code %></span>
+        </div>
+        <div class="course-header-badge <%= course.category === 'Business' ? 'business' : '' %>"><%= course.code %></div>
+        <h1><%= course.name %></h1>
+        <p><%= course.description %></p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="course-detail-grid">
+            <div class="course-detail-main">
+                <div class="course-section">
+                    <h2>Course Overview</h2>
+                    <p><%= course.description %></p>
+                    
+                    <h3>Career Outcomes</h3>
+                    <p>Graduates of this qualification may find employment in roles such as:</p>
+                    <ul class="career-list">
+                        <% if (course.category === 'Hospitality') { %>
+                            <li><i class="fas fa-check"></i> Chef / Cook</li>
+                            <li><i class="fas fa-check"></i> Kitchen Supervisor</li>
+                            <li><i class="fas fa-check"></i> Catering Manager</li>
+                            <li><i class="fas fa-check"></i> Restaurant Manager</li>
+                            <li><i class="fas fa-check"></i> Food Service Manager</li>
+                        <% } else { %>
+                            <li><i class="fas fa-check"></i> Business Manager</li>
+                            <li><i class="fas fa-check"></i> Team Leader</li>
+                            <li><i class="fas fa-check"></i> Project Coordinator</li>
+                            <li><i class="fas fa-check"></i> Operations Manager</li>
+                            <li><i class="fas fa-check"></i> Executive Officer</li>
+                        <% } %>
+                    </ul>
+                </div>
+                
+                <div class="course-section">
+                    <h2>Delivery Modes</h2>
+                    <div class="delivery-modes">
+                        <% course.delivery.forEach(mode => { %>
+                            <div class="delivery-mode">
+                                <i class="fas fa-check-circle"></i>
+                                <span><%= mode %></span>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+                
+                <div class="course-section">
+                    <h2>Entry Requirements</h2>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-check"></i> Be at least 18 years of age</li>
+                        <li><i class="fas fa-check"></i> Complete a Language, Literacy and Numeracy (LLN) assessment</li>
+                        <li><i class="fas fa-check"></i> Attend a pre-training review and interview</li>
+                        <li><i class="fas fa-check"></i> International students must meet English language requirements</li>
+                    </ul>
+                </div>
+                
+                <div class="course-section">
+                    <h2>Assessment Methods</h2>
+                    <p>Students will be assessed through a variety of methods including:</p>
+                    <ul class="assessment-list">
+                        <li><i class="fas fa-file-alt"></i> Written assessments and projects</li>
+                        <li><i class="fas fa-tasks"></i> Practical demonstrations</li>
+                        <li><i class="fas fa-clipboard-check"></i> Workplace observations</li>
+                        <li><i class="fas fa-users"></i> Role plays and simulations</li>
+                        <li><i class="fas fa-folder"></i> Portfolio of evidence</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="course-detail-sidebar">
+                <div class="course-info-card">
+                    <h3>Course Information</h3>
+                    <ul class="course-info-list">
+                        <li>
+                            <span class="info-label">Course Code</span>
+                            <span class="info-value"><%= course.code %></span>
+                        </li>
+                        <li>
+                            <span class="info-label">Duration</span>
+                            <span class="info-value"><%= course.duration %></span>
+                        </li>
+                        <li>
+                            <span class="info-label">Total Units</span>
+                            <span class="info-value"><%= course.units %> units</span>
+                        </li>
+                        <li>
+                            <span class="info-label">Category</span>
+                            <span class="info-value"><%= course.category %></span>
+                        </li>
+                        <li>
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Melbourne CBD</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="course-actions">
+                        <a href="/contact" class="btn btn-primary btn-block">Enquire Now</a>
+                        <a href="https://training.gov.au/Training/Details/<%= course.code %>" target="_blank" class="btn btn-outline btn-block">
+                            View on training.gov.au <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="course-info-card">
+                    <h3>Need More Information?</h3>
+                    <p>Contact our team to discuss this course, entry requirements, or to arrange a campus visit.</p>
+                    <ul class="contact-quick">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:1300001253">1300 001 253</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@swiss.edu.au">info@swiss.edu.au</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-cta-banner">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Enrol?</h2>
+            <p>Take the first step towards your new career today</p>
+            <div class="cta-actions">
+                <a href="/contact" class="btn btn-white btn-lg">
+                    <i class="fas fa-paper-plane"></i> Apply Now
+                </a>
+                <a href="/courses" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-arrow-left"></i> View All Courses
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

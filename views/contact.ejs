@@ -1,0 +1,195 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Contact Us</span>
+        </div>
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team - we're here to help</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle"></i>
+                <strong>Thank you!</strong> Your message has been sent successfully. We will get back to you shortly.
+            </div>
+        <% } %>
+        
+        <div class="contact-grid">
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and our team will respond within 24-48 hours.</p>
+                
+                <form action="/contact" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="enquiryType">Enquiry Type *</label>
+                        <select id="enquiryType" name="enquiryType" class="form-control" required>
+                            <option value="">Select an option</option>
+                            <option value="course">Course Information</option>
+                            <option value="enrolment">Enrolment Enquiry</option>
+                            <option value="fees">Fees & Payment</option>
+                            <option value="rpl">Recognition of Prior Learning</option>
+                            <option value="agent">Agent Enquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="course">Course of Interest</label>
+                        <select id="course" name="course" class="form-control">
+                            <option value="">Select a course (optional)</option>
+                            <optgroup label="Hospitality">
+                                <option value="SIT30821">SIT30821 Certificate III in Commercial Cookery</option>
+                                <option value="SIT40521">SIT40521 Certificate IV in Kitchen Management</option>
+                                <option value="SIT50422">SIT50422 Diploma of Hospitality Management</option>
+                                <option value="SIT60322">SIT60322 Advanced Diploma of Hospitality Management</option>
+                            </optgroup>
+                            <optgroup label="Business & Management">
+                                <option value="BSB50120">BSB50120 Diploma of Business</option>
+                                <option value="BSB60120">BSB60120 Advanced Diploma of Business</option>
+                                <option value="BSB50420">BSB50420 Diploma of Leadership and Management</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required placeholder="How can we help you?"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter">
+                            <span>I would like to receive updates about courses and events</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="contact-info-section">
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Phone</h4>
+                            <a href="tel:1300001253">1300 001 253</a>
+                            <a href="tel:0343094084">(03) 4309 4084</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:info@swiss.edu.au">info@swiss.edu.au</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Training Location (CBD)</h4>
+                            <p>Level 14, 333 Collins Street<br>Melbourne VIC 3000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Admin Office</h4>
+                            <p>Level 1, Suite 22<br>420 Collins Street<br>Melbourne VIC 3000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="/courses"><i class="fas fa-arrow-right"></i> View Our Courses</a></li>
+                        <li><a href="/handbooks"><i class="fas fa-arrow-right"></i> Student Handbooks</a></li>
+                        <li><a href="/policies"><i class="fas fa-arrow-right"></i> Policies & Procedures</a></li>
+                        <li><a href="/agents"><i class="fas fa-arrow-right"></i> Agent Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="contact-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-map">
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.3088685543!2d144.9612!3d-37.8165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s333%20Collins%20St%2C%20Melbourne%20VIC%203000!5e0!3m2!1sen!2sau!4v1705320000000!5m2!1sen!2sau" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

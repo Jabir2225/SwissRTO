@@ -1,0 +1,361 @@
+<%- include('partials/header') %>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+        <div class="hero-particles"></div>
+    </div>
+    
+    <div class="hero-content">
+        <div class="hero-text">
+            <span class="hero-badge">RTO 41517 | Registered Training Organisation</span>
+            <h1>
+                <span class="hero-title-line">Shape Your Future</span>
+                <span class="hero-title-accent">With World-Class Training</span>
+            </h1>
+            <p class="hero-description">
+                Swiss Institute Australia delivers nationally recognised qualifications in 
+                <strong>Hospitality</strong>, <strong>Business</strong>, and <strong>Leadership</strong>. 
+                Located in <strong>Melbourne CBD</strong> at Level 14, 333 Collins Street, we provide practical skills and pathways to your dream career.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">2016</span>
+                    <span class="stat-label">Established</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">Qualifications</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Industry Focused</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="/courses" class="btn btn-primary btn-lg">
+                    <span>Explore Courses</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="/contact" class="btn btn-outline-light btn-lg">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="hero-card hero-card-1">
+                <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Hospitality</h3>
+                <p>Commercial Cookery & Kitchen Management</p>
+            </div>
+            <div class="hero-card hero-card-2">
+                <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Business</h3>
+                <p>Diploma & Advanced Diploma Programs</p>
+            </div>
+            <div class="hero-card hero-card-3">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <h3>Leadership</h3>
+                <p>Management & Team Leadership</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator"></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section section-about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="section-tag">About Swiss Institute</span>
+                <h2>A Boutique Education Provider in Melbourne</h2>
+                <p class="lead">Since 2016, Swiss Institute Australia has been helping individuals achieve their dreams through world-class vocational training.</p>
+                <p>We specialise in Hospitality, Business, Leadership, Project Management, Property Management, and Occupational Health & Safety with direct pathways to University and employment.</p>
+                
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4>Student-Centered Approach</h4>
+                            <p>Encouraging self-directed critical thinkers</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-award"></i></div>
+                        <div>
+                            <h4>Recognition of Prior Learning</h4>
+                            <p>Credit for your existing skills and experience</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+                        <div>
+                            <h4>Flexible Delivery</h4>
+                            <p>Online, blended, and face-to-face options</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="/about" class="btn btn-secondary">Learn More About Us</a>
+            </div>
+            
+            <div class="about-image">
+                <div class="image-frame">
+                    <div class="map-frame">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.3088685543!2d144.9612!3d-37.8165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s333%20Collins%20St%2C%20Melbourne%20VIC%203000!5e0!3m2!1sen!2sau!4v1705320000000!5m2!1sen!2sau" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-label">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Level 14, 333 Collins St, Melbourne CBD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-badge">
+                    <span class="badge-number">41517</span>
+                    <span class="badge-text">Registered Training Organisation</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Courses Section -->
+<section class="section section-courses">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Programs</span>
+            <h2>Nationally Recognised Qualifications</h2>
+            <p>Choose from our range of industry-focused courses designed to launch your career</p>
+        </div>
+        
+        <div class="course-tabs">
+            <button class="tab-btn active" data-tab="hospitality">
+                <i class="fas fa-utensils"></i> Hospitality
+            </button>
+            <button class="tab-btn" data-tab="business">
+                <i class="fas fa-briefcase"></i> Business & Management
+            </button>
+        </div>
+        
+        <div class="course-grid" id="hospitality">
+            <div class="course-card">
+                <div class="course-badge">SIT30821</div>
+                <h3>Certificate III in Commercial Cookery</h3>
+                <p>Start your culinary career with practical skills in commercial cooking</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 52 weeks</span>
+                    <span><i class="fas fa-chalkboard-teacher"></i> Face-to-face</span>
+                </div>
+                <a href="/courses/certificate-iii-commercial-cookery" class="course-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-badge">SIT40521</div>
+                <h3>Certificate IV in Kitchen Management</h3>
+                <p>Advance to supervisory roles with kitchen management skills</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 78 weeks</span>
+                    <span><i class="fas fa-chalkboard-teacher"></i> Face-to-face</span>
+                </div>
+                <a href="/courses/certificate-iv-kitchen-management" class="course-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-badge">SIT50422</div>
+                <h3>Diploma of Hospitality Management</h3>
+                <p>Develop managerial skills for senior hospitality roles</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 104 weeks</span>
+                    <span><i class="fas fa-laptop"></i> Blended</span>
+                </div>
+                <a href="/courses/diploma-hospitality-management" class="course-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-badge">SIT60322</div>
+                <h3>Advanced Diploma of Hospitality Management</h3>
+                <p>Master strategic management in hospitality operations</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 104 weeks</span>
+                    <span><i class="fas fa-laptop"></i> Blended</span>
+                </div>
+                <a href="/courses/advanced-diploma-hospitality-management" class="course-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="course-grid hidden" id="business">
+            <div class="course-card">
+                <div class="course-badge business">BSB50120</div>
+                <h3>Diploma of Business</h3>
+                <p>Build foundational business skills for diverse career paths</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 52 weeks</span>
+                    <span><i class="fas fa-laptop"></i> Blended</span>
+                </div>
+                <a href="/courses/diploma-business" class="course-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-badge business">BSB60120</div>
+                <h3>Advanced Diploma of Business</h3>
+                <p>Advance your business expertise with senior-level skills</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 52 weeks</span>
+                    <span><i class="fas fa-laptop"></i> Blended</span>
+                </div>
+                <a href="/courses/advanced-diploma-business" class="course-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-badge business">BSB50420</div>
+                <h3>Diploma of Leadership and Management</h3>
+                <p>Develop leadership skills for team and project management</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 52 weeks</span>
+                    <span><i class="fas fa-laptop"></i> Blended</span>
+                </div>
+                <a href="/courses/diploma-leadership-management" class="course-link">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="section-cta">
+            <a href="/courses" class="btn btn-primary">View All Courses</a>
+        </div>
+    </div>
+</section>
+
+<!-- Delivery Modes Section -->
+<section class="section section-delivery">
+    <div class="container">
+        <div class="section-header light">
+            <span class="section-tag">How We Teach</span>
+            <h2>Flexible Delivery Modes</h2>
+            <p>We offer multiple ways to complete your qualification</p>
+        </div>
+        
+        <div class="delivery-grid">
+            <div class="delivery-card">
+                <div class="delivery-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>Face-to-Face</h3>
+                <p>Traditional classroom learning at our Melbourne CBD campus with hands-on practical sessions</p>
+            </div>
+            
+            <div class="delivery-card">
+                <div class="delivery-icon">
+                    <i class="fas fa-laptop-house"></i>
+                </div>
+                <h3>Online Learning</h3>
+                <p>Flexible online study options through our e-learning platform, study at your own pace</p>
+            </div>
+            
+            <div class="delivery-card">
+                <div class="delivery-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Blended Learning</h3>
+                <p>Combination of online theory and face-to-face practical sessions for maximum flexibility</p>
+            </div>
+            
+            <div class="delivery-card">
+                <div class="delivery-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Work Placement</h3>
+                <p>Industry placement opportunities to gain real-world experience in your field</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section section-cta-banner">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Contact us today to discuss your study options and begin your path to a rewarding career</p>
+            <div class="cta-actions">
+                <a href="/contact" class="btn btn-white btn-lg">
+                    <i class="fas fa-paper-plane"></i> Enquire Now
+                </a>
+                <a href="tel:1300001253" class="btn btn-outline-white btn-lg">
+                    <i class="fas fa-phone"></i> 1300 001 253
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resources Section -->
+<section class="section section-resources">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Student Resources</span>
+            <h2>Everything You Need</h2>
+            <p>Access important documents, policies, and information</p>
+        </div>
+        
+        <div class="resources-grid">
+            <a href="/handbooks" class="resource-card">
+                <div class="resource-icon"><i class="fas fa-book-open"></i></div>
+                <h3>Student Handbooks</h3>
+                <p>Course guides, assessment information, and student support resources</p>
+                <span class="resource-link">Access Handbooks <i class="fas fa-arrow-right"></i></span>
+            </a>
+            
+            <a href="/policies" class="resource-card">
+                <div class="resource-icon"><i class="fas fa-file-contract"></i></div>
+                <h3>Policies & Procedures</h3>
+                <p>Privacy policy, complaints, refunds, and compliance documents</p>
+                <span class="resource-link">View Policies <i class="fas fa-arrow-right"></i></span>
+            </a>
+            
+            <a href="/agents" class="resource-card">
+                <div class="resource-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Agent Information</h3>
+                <p>Information for education agents and partnership opportunities</p>
+                <span class="resource-link">Agent Details <i class="fas fa-arrow-right"></i></span>
+            </a>
+            
+            <a href="https://training.gov.au/organisation/details/41517" target="_blank" class="resource-card">
+                <div class="resource-icon"><i class="fas fa-check-circle"></i></div>
+                <h3>Verify Our Registration</h3>
+                <p>Check our qualifications on the national training register</p>
+                <span class="resource-link">training.gov.au <i class="fas fa-external-link-alt"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

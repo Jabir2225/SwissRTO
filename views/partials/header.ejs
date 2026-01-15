@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Swiss Institute Australia">
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>">About Us</a></li>
+                <li class="dropdown">
+                    <a href="/courses" class="<%= page === 'courses' ? 'active' : '' %>">
+                        Courses <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-section">
+                            <h4>Hospitality</h4>
+                            <a href="/courses/certificate-iii-commercial-cookery">SIT30821 Certificate III in Commercial Cookery</a>
+                            <a href="/courses/certificate-iv-kitchen-management">SIT40521 Certificate IV in Kitchen Management</a>
+                            <a href="/courses/diploma-hospitality-management">SIT50422 Diploma of Hospitality Management</a>
+                            <a href="/courses/advanced-diploma-hospitality-management">SIT60322 Advanced Diploma of Hospitality Management</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Business & Management</h4>
+                            <a href="/courses/diploma-business">BSB50120 Diploma of Business</a>
+                            <a href="/courses/advanced-diploma-business">BSB60120 Advanced Diploma of Business</a>
+                            <a href="/courses/diploma-leadership-management">BSB50420 Diploma of Leadership and Management</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="<%= page === 'policies' || page === 'handbooks' ? 'active' : '' %>">
+                        Resources <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-content dropdown-small">
+                        <a href="/handbooks"><i class="fas fa-book"></i> Student Handbooks</a>
+                        <a href="/policies"><i class="fas fa-file-alt"></i> Policies & Procedures</a>
+                    </div>
+                </li>
+                <li><a href="/agents" class="<%= page === 'agents' ? 'active' : '' %>">Agents</a></li>
+                <li><a href="/contact" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="search-toggle" aria-label="Search" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="/contact" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="search-close" id="searchClose" aria-label="Close search">
+                <i class="fas fa-times"></i>
+            </button>
+            <form action="/search" method="GET" class="search-form">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" name="q" placeholder="Search courses, policies, handbooks..." class="search-input" id="searchInput" autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <div class="search-suggestions">
+                <h4>Popular Searches</h4>
+                <div class="search-tags">
+                    <a href="/courses/certificate-iii-commercial-cookery">Commercial Cookery</a>
+                    <a href="/courses/diploma-business">Diploma of Business</a>
+                    <a href="/courses/diploma-hospitality-management">Hospitality Management</a>
+                    <a href="/policies">Policies</a>
+                    <a href="/handbooks">Student Handbook</a>
+                    <a href="/agents">Agent Information</a>
+                </div>
+            </div>
+        </div>
+    </div>
